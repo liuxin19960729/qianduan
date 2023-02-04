@@ -1,0 +1,9 @@
+main article h1 {
+  color: red;
+}
+main article h2 {
+  color: green;
+}
+main article button:hover {
+  color: red;
+}

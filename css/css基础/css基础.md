@@ -155,10 +155,188 @@ div[zz^="xin"]{
 :invalid 输入验证无效
 :valid 验证有效的表单
 .....
+
+/* 文本相关伪类 */
+
+::first-letter 文本第一个文字
+::first-line 第一行
+
+前面加内容
+::after {
+    content:''
+}
+
+后面加内容
+::before{
+    content:''
+}
+
+
 ```
 
-## 
+## CSS权重
+```
+权重位
+ style       1000
+ id          0100
+class 属性    0010
+元素 伪类      0001
+ *            0000
+
+权重一样  用后面写的
+
+!important 强制使用该css属性
+
+xxx{
+  color:red !important;
+}
+```
+### css 继承
+[code](./css_%E7%BB%A7%E6%89%BF.html)
+```less
+有些属性存在继承关系 
+
+有些属性不会继承
+ border
+
+
+* 权重是0
+继承权重 NULL
+0>NULL
+
+less 书写方式
+main{
+    article{
+        h1{
+            color: red;
+        }
+        h2{
+            color: green;
+        }
+
+        button:hover{
+            color: red;
+        }
+
+    }
+}
+```
+## 文本内容
+### 字体
+```
+font-family :字体 可以写多个 浏览器会从头开始检查那个可以用 如果都
+能用使用默认
+```
+#### 引入自己的字体 @font-face
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@font-face)
+```css
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
 
 ```
+####  font-weight 字重
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight)
+```css
+font-weight 字重
+bold 加粗
+normal  正常状态下
+```
+
+#### font-size 
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size)
+```
+单位:
+%
+px
+1em = 100%
+```
+#### color
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color)
+```css
+#ffffff
+rgb()
+rgba()
 
 ```
+#### line-height
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height)
+
+
+#### font-style
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-style)
+```css
+italic  倾斜
+normal  正常样式
+
+```
+#### font
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font)
+```css
+例如
+font: small-caps bold 24px/1 sans-serif;
+```
+
+#### text-transform(css 大小写转换)
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform)
+```css
+text-transform: uppercase; 大写
+text-transform: lowercase; 小写
+text-transform: capitalize;  首字母大写
+text-transform: none; 无样式
+```
+
+#### text-decoration
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration)
+```css
+text-decoration: none; 去掉文字上的线
+text-decoration: underline;
+text-decoration: underline dotted;
+....
+```
+
+#### text-shadow 文本阴影
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow)
+```css
+/* offset-x | offset-y | blur-radius(模糊) | color */
+```
+
+### 文本空白和溢出 (white-space)
+
+[white-space_mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space)
+[text-overflow_mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
+```css
+
+white-space: nowrap; 不换行
+white-space: pre;空白符保留 忽略 换哈
+            pre-wrap 换行 空白 
+            pre-line 换行符
+
+
+文字操出框的大小显示 ...
+
+white-space: nowrap; 不换行
+text-overflow: ellipsis;
+overflow: hidden;
+```
+
+### 文本缩进和对齐
+#### text-indent 缩进
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-indent)
+
+#### text-align
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-align)
+#### 垂直对齐  vertical-align
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align)
+
+#### letter-space 字符间隔
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/letter-spacing)
+
+
+#### word-spacing 单词间隔
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-spacing)
+
+#### writing-mode 排版方式
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/writing-mode)

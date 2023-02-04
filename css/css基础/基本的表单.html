@@ -6,12 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        input:disabled{
+            background-color: red;
+        }
 
+        input:required{
+            background-color: gray;
+        }
+
+        .opt:optional{
+            background-color: pink;
+        }
+        input:invalid{
+            background: red;
+        }
     </style>
 </head>
 <body>
     <form action="">
-        
+        <!-- :disabled 禁止表单填写
+        :enabled  
+        :required 必填的元素 url: https://developer.mozilla.org/zh-CN/docs/Web/CSS/:required
+        :optional 不是必填的元素
+        :invalid 输入验证无效
+        :valid 验证有效的表单 -->
+
+        <input type="text" disabled value="我被禁用">
+         <!-- 必填框    -->
+        <input type="text" required>
+        <hr>
+        <input type="text" class="opt" >
+        <input type="text" class="opt" required>
+        <hr>   
+        <input type="text" pattern="[A][0-9]{1,2}">
     </form>
 </body>
 </html>
