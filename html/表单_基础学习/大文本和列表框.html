@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="jiesao">介绍</label>
+        
+        
+        <textarea name="jiesao" id="jiesao" cols="30" rows="10" placeholder="提示" ></textarea>
+
+        <select name="aihao">
+            <option value="game">游戏</option>
+            <option value="game1">游戏1</option>
+            <option value="game2">游戏2</option>
+        </select>
+
+        <!-- 对列表分组 -->
+        <label>Please choose one or more pets:
+            <select name="pets" multiple size="4">
+              <optgroup label="4-legged pets">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster" disabled>Hamster</option>
+              </optgroup>
+              <optgroup label="Flying pets">
+                <option value="parrot">Parrot</option>
+                <option value="macaw">Macaw</option>
+                <option value="albatross">Albatross</option>
+              </optgroup>
+            </select>
+        </label>
+    </form>
+
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea">
+        文本域的mdn
+    </a>
+
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select">
+        select mdn 文档
+    </a>
+
+</body>
+</html>

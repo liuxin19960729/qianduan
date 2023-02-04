@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .empty_test ul li{
+            border: 5px solid red;
+        }
+        .empty_test ul li:empty{
+            display: none;
+        }
+        /* li:first-child first_child 后代元素 第一个元素是 是 li才能被选中 */
+        .first_child li:first-child{
+            color: green;
+        }
+
+        /* first-of-type 第一个li的元素 */
+        .first_of_type li:first-of-type{
+            color: red;
+        }
+
+        .only_child :only-child{
+            color: aqua;
+        }
+
+        /* nth-child 
+         父节点下所有子节点 前另个 并且 是li的
+         nth-of-type 父节点 前两个li子节点
+        */
+        .nth li:nth-child(-n+2){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- empty 伪类
+        对没有内容 只包含空格符号内容的标签进行选择
+    -->
+    <div class="empty_test">
+        <ul>
+            <li>刘鑫</li>
+            <li>刘鑫1</li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="first_child">
+        <!-- <li>dd</li> -->
+        <ul>
+            <!-- <h1>1</h1> -->
+            <li>1</li>
+            <li>2</li>
+        </ul>
+    </div>
+
+    <div class="first_of_type">
+        <li>ddd</li>
+        <ul>
+            <!-- <h1>1</h1> -->
+            <li>1</li>
+            <li>2</li>
+        </ul>
+    </div>
+
+    <!-- only-child
+        div >ul+ h2 两 标签
+        ul=3*li 
+        li >li 只存在一个子标签
+    -->
+    <div class="only_child">
+        
+        <ul>
+           <li>1</li>
+           <li><h1>only_child</h1></li>
+           <li>3</li>
+        </ul>
+        <h2>
+            ss
+        </h2>
+    </div>
+
+    <div class="nth">
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <li>ul外1</li>
+        <li>ul外2</li>
+        <li>ul外3</li>
+    </div>
+</body>
+</html>
