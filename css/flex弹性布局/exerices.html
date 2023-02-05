@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+           
+            height: 100vh;
+            display: flex;
+            /* 主轴 垂直 */
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        main {
+            flex: 1;
+            background-color: #ccc;
+        }
+
+        footer {
+            height: 60px;
+            background: aqua;
+            display: flex;
+            border-top: 1px black solid;
+        }
+        footer section {
+            flex: 1;
+            border-right: 1px black solid;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        footer section:hover {
+            background-color: aquamarine;
+        }
+
+        footer section:last-child {
+            border-right: 0px;
+        }
+
+        footer section div.title{
+            display: flex;
+            flex: 0 0 60px;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+        footer section ul{
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+            border: 1px black solid;
+            border-bottom: 0px;
+            border-radius: 5px;
+        }
+        footer section ul li{
+            padding: 10px 0px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 1px black solid;
+        }
+        footer section ul li:last-child{
+            border: bottom 0px;
+        }
+  
+
+    </style>
+</head>
+
+<body>
+    <main>
+
+    </main>
+    <footer>
+        <section>
+            <div class="title">
+                One
+            </div>
+            <ul>
+                <li>软件1</li>
+                <li>游戏2</li>
+                <li>BaiDu.com</li>
+            </ul>
+        </section>
+        <section>
+            <div class="title">
+                two
+            </div>
+        </section>
+        <section>
+            <div class="title">
+                Three
+            </div>
+        </section>
+        <section>
+            <div class="title">
+                Four
+            </div>
+        </section>
+        <section>
+            <div class="title">
+                Four
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

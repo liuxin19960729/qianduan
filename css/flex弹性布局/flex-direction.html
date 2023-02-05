@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            display: flex;
+            /* 上到下排列 */
+            flex-direction: column;
+        }
+
+
+        footer{
+            background-color: #bbb;
+        }
+
+        footer ul{
+            display: flex;
+            flex-direction: row;
+        }
+        footer ul li{
+            list-style: none;
+            flex: 1;
+            text-align: center;
+            line-height: 2em;
+            height: 30px;
+        }
+        footer ul li:hover{
+           background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        a
+    </article>
+    <footer>
+        <ul>
+            <li>刘鑫</li>
+            <li>卢新</li>
+            <li>张鑫</li>
+            <li>李鑫</li>
+        </ul>
+    </footer>
+</body>
+</html>
