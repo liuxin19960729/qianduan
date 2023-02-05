@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        nav{
+            width: 1000px;
+            display: flex;
+            background: red;
+        }
+        nav ul{
+            display: flex;
+            flex: 1;
+            list-style: none;
+            
+        }
+        nav ul:nth-child(1) >li{
+            padding: 0px 10px;
+            
+        }
+        nav ul:nth-child(1) >li:hover{
+            background-color: aqua;
+        }
+        nav ul:nth-child(2){
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>表单1</li>
+            <li>表单2</li>
+            <li>表单3</li>
+        </ul>
+        <ul>
+            <li>liuXin1</li>
+            <li>liuXin2</li>
+        </ul>
+    </nav>
+</body>
+</html>
