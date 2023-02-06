@@ -35,7 +35,7 @@ grid-template-coloums:1fr 1fr 1fr; 3列每列一份
 ```
 
 ```
-## colum-grap 列间距
+## column-grap 列间距
 [mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/column-gap)
 ## gap
 [mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gap)

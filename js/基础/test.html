@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        "use strict"
+        // console.log(web);
+        // console.log(123)
+        // var web='123';
+        // // let web='3' 不能重复声明
+
+     
+        // let c={
+        //     url:'123'
+        // }
+        // Object.freeze(c)
+        // delete c.url
+        // console.log(c)
+
+        // "use strict"
+        // let web=200;
+        // function a(){
+
+        // }
+        // a.prototype.cc=300;
+  
+        // let aaa=new a()
+        // aaa["cc"]=400
+        // console.log(aaa.cc)
+        // console.log(a.prototype.cc)
+        // console.log(a.prototype==aaa["__proto__"])
+
+        // let str=new String("cc")
+        // console.log(str.endsWith("c"))
+
+        function fun( args1,args2,...args){
+            
+            console.log(args1);
+            console.log(args2);
+            console.log(args)
+        }
+        fun.apply(null,[1,2,3])
+
+        fun(...[1,2,3])
+    </script>
+</body>
+</html>
