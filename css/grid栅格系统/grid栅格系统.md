@@ -99,3 +99,38 @@ row dense ；后面的元素填满前面的格子
 ```
 容器的空间大于弹性盒子空间 可以使用排列方式
 ```
+## 整体控制元素
+```
+元素不给高度默认撑满
+```
+
+### justify-items 和弹性盒子一样
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-items)
+### align-items 和弹性盒子一样
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items)
+
+
+## 独立控制一个元素
+### justify-self
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-self)
+### align-self
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-self)
+
+
+### place-content
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/place-content)
+```
+水平 和 垂直 对容器的定义 影响元素排雷 
+```
+
+### place-items
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/place-items)
+```
+    水平垂直对元素的定义
+```
+###  place-self
+
+```
+place-self
+对自己元素独立控制 
+```
