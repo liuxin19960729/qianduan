@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s1=Symbol("1")
+        let s2=Symbol("1")
+        console.log(s1==s2) // Symbol 函数创建的本地Symbol永远不相同
+
+        let d1= Symbol.for("2")
+        let d2= Symbol.for("2")
+        console.log(d1==d2) // 全局Symbol 只注册一份
+
+        let obj={
+            [s1]:1,
+            [s2]:2,
+            [d1]:3,
+            [d2]:4,
+            a:200
+        }
+        console.log(obj)
+        // Object.keys 获取不到Symbol属性
+        Object.keys(obj).forEach(k=>{
+            console.log(k)
+        })
+        //获取到所有的Symbol属性
+        Object.getOwnPropertySymbols(obj).forEach(sym=>{
+            console.log(sym.description)
+            console.log(sym.valueOf())
+        })
+        // Reflect.ownKeys(obj) 可以获取到 所有属性
+        console.table(Reflect.ownKeys(obj))
+    </script>
+</body>
+</html>
