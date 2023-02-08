@@ -194,3 +194,30 @@
 // })
 // proxy.name="crl"
 // console.log(proxy.name)
+
+// 函数代理
+// function c(){
+//     console.log("fun c")
+// }
+
+// let proxy=new Proxy(c,{
+//     apply(fun,obj,args){
+//         console.log("proxy");
+//         fun.apply(obj,args)
+//     }
+// })
+
+// proxy.apply(this,[])
+
+// 数组代理
+let array=[{tel:'1234567890'}];
+let proxy=new Proxy(array,{
+    get(arr,key){
+        console.log(arr);
+        console.log(key)
+        return "tel:"+arr[key].tel;
+    }
+})
+
+console.log(proxy[0])
+
