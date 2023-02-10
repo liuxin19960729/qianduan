@@ -326,7 +326,49 @@ event.currentTarget 当前绑定函数属性对象
 event.target 那个属性被触发
 ```
 ### event.preventDefault 取消事件的默认行为
+
+### 事件冒泡 和样式无关只和元素层级有关
+
+### 事件委派
+[code](./9.html)
+```js
+//在document 添加点击事件 
+document.addEventListener("click", function (e) {
+      console.log("document click", e.x,e.y)
+  })
+```
+## 事件的捕获
+### 事件传播阶段
+```js
+1.捕获阶段 document---->到目标元素开始捕获   
+        默认情况下不会在捕获阶段触发事件
+2.目标阶段
+3.冒泡阶段 目标元素----->到document (默认是冒泡阶段触发事件)
+
+
+
+开启捕获阶段触发
+    addEventListener(type, listener, useCapture);
+
+document.addEventListener("click", function (e) {
+      console.log("document click", e.x,e.y)
+      e.stopPropagation()
+  },true)
 ```
 
+### 事件处于那个阶段
+```js
+e.eventPhase,Event.CAPTURING_PHASE
+document.addEventListener("click", function (e) {
+    console.log("document click", e.x,e.y,e.eventPhase,Event.CAPTURING_PHASE)
+    // e.stopPropagation()
+},true)
+
+document.addEventListener("click", function (e) {
+    console.log("document click", e.x,e.y,e.eventPhase,Event.BUBBLING_PHASE)
+   
+})
 ```
+
+
 
