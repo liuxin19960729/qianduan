@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击按钮切换图片</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #continer {
+            position: absolute;
+            background: pink;
+            width: 100%;
+        }
+
+        h1,
+        .btns,
+        .imgBox {
+            text-align: center;
+        }
+        img{
+            display: block;
+            height: 100%;
+            
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+
+            let imgs = ["1.png", "2.png", "3.png", "4.png", "5.png"]
+            let index = 0;
+            let img = document.querySelector("img")
+            let title = document.querySelector("#title")
+            title.innerText=`第${index+1}张图片`;
+            document.querySelector("#pre").
+                addEventListener("click", function (event) {
+                    index--;
+                    index = index < 0 ? 0 : index;
+                    img.src = "./images/" + imgs[index]
+                    title.innerText=`第${index+1}张图片`;
+                })
+            document.querySelector("#next").
+                addEventListener("click", function (event) {
+                    index++;
+                    index = index >= imgs.length ? imgs.length - 1 : index;
+                    img.src = "./images/" + imgs[index]
+                    title.innerText=`第${index+1}张图片`;
+                })
+
+        })
+
+
+    </script>
+</head>
+
+<body>
+    <div id="continer">
+        <h1 id="title">第一张图片</h1>
+        <div class="imgBox">
+            <img src="./images/1.png" alt="">
+        </div>
+        <div class="btns">
+            <button id="pre">上一张</button>
+            <button id="next">下一张</button>
+        </div>
+    </div>
+</body>
+
+</html>

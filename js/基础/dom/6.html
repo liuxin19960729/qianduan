@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .cla1 {
+            color: pink;
+        }
+
+        .cla2 {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        js修改CSS样式
+    </h2>
+
+    <button id="btn">点击</button>
+
+    <script>
+
+        let btn = document.querySelector("#btn")
+        let h2 = document.querySelector("h2")
+        let flag = true;
+        btn.onclick = function () {
+            flag = !flag;
+            setClass()
+        }
+
+        function setClass() {
+            let cla = flag ? "cla1" : "cla2";
+            h2.className = cla;
+        }
+
+        setClass();
+
+        // let h2 = document.querySelector("h2")
+        // h2.style.color = "red"
+        // h2.style.backgroundColor = "black"
+
+        // let computedH2 = getComputedStyle(h2)
+        // console.log(computedH2.width)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(e){
+          console.log(e)
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="continer" zz="200">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+
+    <script>
+        // let ulele=document.getElementsByTagName("ul")[0]
+        // ulele.inputMode=
+        // console.dir(ulele.childNodes)
+        // ulele.childNodes.forEach(v=>{
+        //     console.log(v)
+        // })
+
+        // console.dir(ulele.children)
+        let contine=document.getElementById("continer")
+        
+
+        contine.addEventListener("click",function(){
+            console.log(1)
+        })
+        
+        contine.addEventListener("click",function(e){
+            console.log(e)
+        })
+
+
+    </script>
+</body>
+</html>

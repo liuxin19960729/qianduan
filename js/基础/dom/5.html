@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table td {
+            border: 1px solid black;
+
+        }
+    </style>
+
+    <script>
+        function bindClickEvent(tr){
+            tr.querySelector("td a")
+            .onclick=function(){
+                this.parentNode.parentNode.remove()
+            }
+        }
+        let i = 4;
+        window.onload = function () {
+            document.getElementById("addUser")
+                .onclick = function () {
+                    let username = document.
+                        querySelector("[name=username]").value;
+
+                    let tbody = document.querySelector("tbody");
+                    tbody.insertAdjacentHTML("beforeend",
+                    `
+                    <tr>
+                        <td>${++i}</td>
+                        <td>${username}</td>
+                        <td><a href="javascript:;">删除</a></td>
+                     </tr>
+                    `)
+
+                  bindClickEvent( tbody.querySelector("tr:last-child"))
+                    
+                }
+
+
+                // 绑定事件
+
+                let dels=document.querySelectorAll("tbody tr");
+
+                dels.forEach(ele=>{
+                    bindClickEvent(ele)
+                })
+        }
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>姓名</td>
+                <td>删除</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>liuxin</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>liuxin</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>liuxin</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>liuxin</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form>
+        <label for="username">姓名:</label>
+        <input type="text" name="username">
+        <br>
+        <button type="button" id="addUser">点击</button>
+    </form>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
