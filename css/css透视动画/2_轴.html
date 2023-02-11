@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .continer {
+            width: 400px;
+            height: 400px;
+            border: gray solid 1px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .continer .InputItem {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .continer .InputItem:hover::after{
+            transform: translateX(100%);
+        }
+        .continer .InputItem::after{
+            content: '';
+            width: 200%;
+            height: 5px;
+            background: linear-gradient(to right,white,aqua,orange,white);
+            position: absolute;
+            transform: translateX(-100%);
+            transition: 2s;
+            top: 30px;
+            left: 0px;
+        }
+
+
+        .continer .InputItem input{
+            height: 30px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="continer">
+        <div class="InputItem">
+            <input type="text" name="" id="" placeholder="请输入用户名">
+         
+        </div>
+        <div class="InputItem">
+            <input type="text" name="" id="" placeholder="请输入密码">
+          
+        </div>
+    </div>
+</body>
+
+</html>
