@@ -192,3 +192,57 @@ type C =A & Interface
 ## 泛型
 ## ts 装饰器
 
+## 类型判断
+```ts
+type ZZ<T,U>  =T extends U  ? true : false;
+
+let zzz:ZZ<string,number|string>=true;
+
+```
+
+## keyof  对象属性名的联合
+```ts
+keyof 获取属性的名的联合 
+type StrP=keyof string
+let c:StrP="includes"
+keyof {name:string,age:string} =="name" | "age"
+```
+## typeof 变量值的类型
+```
+typeof 非引用  具体类型
+typeof 引用  没给属性的详细类型
+
+```
+## ts 中的索引签名
+```ts
+obj:{
+    [x:string] :string
+}
+索引 字符串  值 字符串类型
+
+
+obj:{
+    [x:string] :string | string
+}
+
+
+变量名设置
+obj:{
+    [`${string}CC`:string] :string | string
+}
+
+```
+
+## type ttt=keyof any;
+```
+返回联合类型  number string symbol
+```
+## 交叉类型
+```
+A & B
+
+```
+## infer
+```
+定义类型
+```
